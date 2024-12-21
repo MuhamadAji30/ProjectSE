@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile - SoundFly</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            width: 80px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            border: none;
+            background-color: #00aaff;
+            color: white;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .button.cancel {
+            background-color: #ff4040;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .buttons a {
+            width: 30%;
+            text-decoration: none;
+        }
+
+        .buttons .back,
+        .buttons .logout,
+        .buttons .cancel {
+            background: #00aaff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .buttons .logout {
+            background: #ff4040;
+        }
+
+        .buttons .cancel {
+            background-color: #ff4040;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="COVER FOTO PROFILE.jpg" width="300px" height="100px" alt="SoundFly Logo">
+        </div>
+        <h1>Edit Profile</h1>
+
+        <form action="update-profile.php" method="POST">
+            <!-- Email Field -->
+            <input type="email" name="email" placeholder="New Email" required>
+
+            <!-- Password Field -->
+            <input type="password" name="password" placeholder="New Password" required>
+
+            <!-- Submit Button -->
+            <button type="submit" class="button">Save Changes</button>
+        </form>
+
+        <!-- Buttons Section (Back, Cancel, Logout) -->
+        <div class="buttons">
+            <a href="homepage.html" class="back">Back</a>
+            <a href="profile.html" class="cancel">Cancel</a>
+            <a href="login.html" class="logout">Logout</a>
+        </div>
+    </div>
+</body>
+</html>
